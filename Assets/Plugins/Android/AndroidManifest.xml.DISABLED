@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.unity3d.player"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 需要权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    
+    <application android:usesCleartextTraffic="true" >
+        <activity android:name="com.unity3d.player.UnityPlayerActivity"
+                  android:theme="@style/UnityThemeSelector">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+            <meta-data android:name="pvr.app.type" android:value="vr" />
+        </activity>
+        
+        <!-- 国内 -->
+        <!-- 应用ID -->
+        <meta-data android:name="pico_app_id" android:value="9d580a97b177688419a661a7d2ea9598" />
+
+        <!-- 应用Key -->
+        <meta-data android:name="pico_app_key" android:value="9d580a97b177688419a661a7d2ea9598" />
+        
+        <!-- 授权范围，此为固定值 -->
+        <meta-data android:name="pico_scope" android:value="get_user_info" />
+
+        <!-- 商户ID -->
+        <meta-data android:name="pico_merchant_id" android:value="12820" />
+
+        <!-- 支付key -->
+        <meta-data android:name="pico_pay_key" android:value="5dd60a4871013baa56323baf1a6c4ca4" />
+    </application>
+</manifest>
